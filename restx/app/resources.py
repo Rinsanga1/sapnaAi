@@ -27,7 +27,7 @@ class Predict(Resource):
     @api.doc(description="predict using base64")
     def post(self):
         prompt = prompt_parser.parse_args().get("prompt")
-        prompt = "Self-portrait oil painting of a futuristic Indian "+ prompt +" talking to his floating holographic ai assistant, 8k"
+        prompt = "Realistic portrait ,a futuristic Indian "+ prompt +" talking to his floating holographic ai assistant, 8k"
         img64 = generate_sapna(prompt, pipe)
         return {"image": img64}
 
